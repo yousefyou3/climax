@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - CliMax</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Advanced styling for forms */
+        .form-container {
+            width: 80%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to bottom, rgba(0, 150, 136, 0.8), rgba(0, 77, 64, 0.8)), url('home-bg.svg') no-repeat center center/cover;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff; /* Ensure text is visible */
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #fff; /* Ensure text is visible */
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff; /* Button color should be visible */
+            color: #5a27ca; /* Button text color */
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #f6f6f6; /* Hover effect */
+            color: #4a1f9f; /* Hover text color */
+        }
+
+        .form-container .password-container {
+            position: relative;
+        }
+
+        .form-container .password-container .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #fff; /* Ensure icon is visible */
+        }
+
+        #signup-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #109d20; /* Ensure message text is visible */
+        }
+
+        #signup-message.success {
+            color: #d4edda; /* Success message color */
+        }
+
+        #signup-message.error {
+            color: #f8d7da; /* Error message color */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="climax-logo2.png" alt="CliMax Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br><br><br>
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form id="signup-form">
+            <label for="signup-name">Name:</label>
+            <input type="text" placeholder="Name" id="signup-name" name="name" required>
+            <label for="signup-email">Email:</label>
+            <input type="email" placeholder="Email" id="signup-email" name="email" required>
+            <div class="password-container">
+                <label for="signup-password">Password:</label>
+                <input type="password" placeholder="Password" id="signup-password" name="password" required>
+                <i class="fas fa-eye toggle-password" id="toggle-password"></i>
+            </div>
+            <div class="password-container">
+                <label for="signup-confirm-password">Confirm Password:</label>
+                <input type="password" placeholder="Confirm Password" id="signup-confirm-password" name="confirm_password" required>
+                <i class="fas fa-eye toggle-password" id="toggle-confirm-password"></i>
+            </div>
+            <br><br>
+            <button type="submit">SignUp</button>
+        </form>
+        <p id="signup-message"></p>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

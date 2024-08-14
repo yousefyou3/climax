@@ -1,0 +1,301 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #00796b; /* Dark teal background */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-links a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #004d40; /* Even darker teal on hover */
+}
+
+#auth-links{
+    display: flex;
+    color: #bdbdbd;
+}
+
+/* Burger Menu for Mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #00796b;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Section Styling */
+section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* Home Section Styling */
+.home-section {
+    background: linear-gradient(to bottom, rgba(0, 150, 136, 0.8), rgba(0, 77, 64, 0.8)), url('home-bg.svg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+.home-content {
+    max-width: 800px;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 20px;
+    background-color: #004d40;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-size: large;
+}
+
+.cta-button:hover {
+    background-color: #00332b;
+}
+
+/* General Section Styling */
+section {
+    background: linear-gradient(to bottom, rgba(0, 150, 136, 0.7), rgba(0, 77, 64, 0.7));
+    color: #ffffff; /* Ensure text is visible on darker backgrounds */
+    text-align: center;
+}
+
+/* Icons */
+.icon {
+    font-size: 60px;
+    color: #ffffff; /* White color for icons */
+    margin-bottom: 20px;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for headings */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Specific Section Backgrounds */
+.problems-section {
+    background: linear-gradient(to bottom, rgba(33, 150, 243, 0.8), rgba(0, 77, 64, 0.8)); /* Calming blue gradient */
+}
+
+.ai-section {
+    background: linear-gradient(to bottom, rgba(255, 235, 59, 0.8), rgba(0, 77, 64, 0.8)); /* Light yellow to teal gradient */
+}
+
+.blogs-section {
+    background: linear-gradient(to bottom, rgba(76, 175, 80, 0.8), rgba(0, 77, 64, 0.8)); /* Green gradient */
+}
+
+.contact-section {
+    background: linear-gradient(to bottom, rgba(255, 87, 34, 0.8), rgba(0, 77, 64, 0.8)); /* Orange gradient */
+}
+
+/* General Form Styles */
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #90d3bf, #5a27ca); /* Gradient similar to home page */
+    color: #fff;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form-container input {
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5a27ca;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #4a1f9f;
+}
+
+#login-message, #signup-message {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#login-message.success, #signup-message.success {
+    color: #28a745; /* Success green */
+}
+
+#login-message.error, #signup-message.error {
+    color: #dc3545; /* Error red */
+}
+
+/* Hide/Show Password */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: calc(100% - 40px); /* Adjust width to account for icon */
+    padding-right: 40px;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Password Specifications */
+.password-specs {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #004d40;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,149 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+h2{
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #00796b; /* Dark teal background */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-links a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #004d40; /* Even darker teal on hover */
+}
+
+#auth-links {
+    display: flex;
+    color: #bdbdbd;
+}
+
+/* Burger Menu for Mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #00796b;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Problems Section Styling */
+.problems-section {
+    margin-top: 80px; /* Adjust if needed to account for fixed navbar */
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(33, 150, 243, 0.8), rgba(0, 77, 64, 0.8)); /* Calming blue gradient */
+    color: #ffffff; /* Ensure text is visible on darker backgrounds */
+}
+
+.problems-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.problem-card {
+    background-color: #ffffff65;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-card i {
+    font-size: 40px;
+    color: #00796b;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.problem-card h3 {
+    margin: 60px 0 10px;
+    color: #00796b;
+}
+
+.problem-card p {
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #00796b;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #004d40;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .problem-card {
+        width: 100%;
+    }
+}
